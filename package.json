@@ -1,0 +1,28 @@
+{
+  "name": "projetojs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateusHeloi/ProjetoBancoTs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MateusHeloi/ProjetoBancoTs/issues"
+  },
+  "homepage": "https://github.com/MateusHeloi/ProjetoBancoTs#readme",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/readline-sync": "^1.4.8"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
