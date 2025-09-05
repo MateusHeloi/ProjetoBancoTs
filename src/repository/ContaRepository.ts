@@ -1,6 +1,10 @@
 import { Conta } from "../model/conta";
 
 export interface ContaRepository {
+    listarTodas(): Conta[] {
+    return this.listaContas;
+    }
+
 
     procurarPorNumero(numero: number): Conta | null;
 

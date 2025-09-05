@@ -6,6 +6,7 @@ export function main() {
     let opcao: number;
 
     while (true) {
+        
 
         console.log(colors.bg.black, colors.fg.yellow, 
                     "*****************************************************");
