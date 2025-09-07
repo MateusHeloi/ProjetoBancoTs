@@ -2,7 +2,7 @@ import { Conta } from "./conta";
 
 export class ContaPoupanca extends Conta {
 
-    private _aniversario: number;
+      private _aniversario: number;
 
     constructor(numero: number, agencia: number, tipo: number, titular: string, 
         saldo: number, aniversario: number) {

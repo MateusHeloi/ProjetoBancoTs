@@ -1,19 +1,19 @@
 export abstract class Conta {
-    protected _numero: number;
-    protected _agencia: number;
-    protected _tipo: number;
-    protected _titular: string;
-    protected _saldo: number;
+  private _numero: number;
+  private _agencia: number;
+  private _tipo: number;
+  private _titular: string;
+  private _saldo: number;
 
-    constructor(numero: number, agencia: number, tipo: number, titular: string, saldo: number) {
-        this._numero = numero;
-        this._agencia = agencia;
-        this._tipo = tipo;
-        this._titular = titular;
-        this._saldo = saldo;
-    }
+  constructor(numero: number, agencia: number, tipo: number, titular: string, saldo: number){
+    this._numero = numero;
+    this._agencia = agencia;
+    this._tipo = tipo;
+    this._titular = titular;
+    this._saldo = saldo;
+  }
 
-    public get numero() {
+  public get numero() {
         return this._numero;
     }
 
@@ -53,21 +53,24 @@ export abstract class Conta {
         this._saldo = saldo;
     }
 
+
     public sacar(valor: number): boolean {
+
         if (this._saldo < valor) {
-            console.log("\nSaldo Insuficiente!");
+            console.log("\n Saldo Insuficiente!");
             return false;
         }
 
-        this._saldo -= valor;
+        this._saldo = this._saldo - valor;
         return true;
     }
 
     public depositar(valor: number): void {
-        this._saldo += valor;
+        this._saldo = this._saldo + valor;
     }
 
     public visualizar(): void {
+
         let tipo: string = "";
 
         switch (this._tipo) {
@@ -87,5 +90,8 @@ export abstract class Conta {
         console.log("Tipo da Conta: " + tipo);
         console.log("Titular: " + this._titular);
         console.log("Saldo: " + this._saldo.toFixed(2));
+
     }
+
+
 }
